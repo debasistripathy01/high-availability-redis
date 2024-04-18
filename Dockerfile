@@ -11,7 +11,6 @@ EXPOSE 3000
 
 FROM redis
 
-# Copy your Redis configuration file
 COPY clusterconfig.conf /usr/local/redis.conf
 
 CMD ["redis-server", "/usr/local/redis.conf", "npm", "start"]
